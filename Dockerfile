@@ -2,7 +2,9 @@ FROM resin/armv7hf-python
 
 RUN [ "cross-build-start" ]
 
-RUN pip install virtualenvRUN apt-get update && apt-get install -y \
+RUN pip install virtualenv
+
+RUN apt-get update && apt-get install -y \
                 git \
         && rm -rf /var/lib/apt/lists/*
 
